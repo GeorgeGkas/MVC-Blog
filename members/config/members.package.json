@@ -1,0 +1,8 @@
+{
+    "css": [
+        "members/css/members.css"
+    ],
+    "js": [
+        "members/js/members.js"
+    ]
+}

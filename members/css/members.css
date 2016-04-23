@@ -1,0 +1,104 @@
+.logo {
+    color: #ec034d;
+}
+
+.Login {
+    width: 270px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.Login form input[type="email"],
+input[type="password"] {
+    display: block;
+    margin: auto;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border: 1px solid #d7d6d6;
+    background: #fefefe;
+    box-sizing: border-box;
+    width: 250px;
+    font-size: 15px;
+    color: #333232;
+}
+
+.Login form button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: 0;
+    background-color: #c5d1dc;
+    border: 0;
+    padding: 10px 15px;
+    color: #fff;
+    border-radius: 3px;
+    width: 260px;
+    cursor: pointer;
+    font-size: 18px;
+    -webkit-transition-duration: 0.25s;
+    transition-duration: 0.25s;
+}
+
+.Login form button:hover {
+    background-color: rgba(39, 41, 39, 0.1);
+}
+
+.Admin table {
+    width: 98%;
+    text-align: left;
+    font-size: 12px;
+    color: #000;
+    background: #fff;
+    margin-bottom: 10px;
+}
+
+.Admin table th {
+    background-color: #E5E5E5;
+    border: 1px solid #BBBBBB;
+    padding: 3px 6px;
+    font-weight: normal;
+    color: #000;
+}
+
+.Admin table tr td {
+    border: 1px solid #DDDDDD;
+    padding: 5px 6px;
+}
+
+.Admin table tr.alt td {
+    background-color: #E2E2E2;
+}
+
+.Admin table tr:hover {
+    background-color: #F0F0F0;
+    color: #000;
+}
+
+.Admin table a {
+    color: #1F64EF;
+}
+
+.Admin table a:hover {
+    color: #2cabf0;
+}
+
+.Admin ul {
+    margin: 0 auto;
+    max-width: 100px;
+}
+
+.Admin ul li {
+    display: inline;
+    padding-right: 10px;
+}
+.Admin ul li a {
+    color: #015A5D;
+}
+
+.Admin ul li a:hover {
+    color: #21927e;
+}
+
+.AdminMsg {
+    text-align: center;
+}

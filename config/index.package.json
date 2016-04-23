@@ -1,0 +1,9 @@
+{
+    "css": [
+        "css/normalize.min.css",
+        "css/style.css"
+    ],
+    "js": [
+
+    ]
+}
