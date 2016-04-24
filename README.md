@@ -109,3 +109,9 @@ The post table holds the title, a description and the main content of each post 
 
 
 
+##Safety
+
+We add a helper php script called **bcrypt.php** under root directory. This script takes as input a text value and returned the hashed one. 
+The feature adds some security to our members as we verify now their passwords using [bcrypt](https://secure.php.net/manual/en/function.password-hash.php).
+
+As we use `password_verify()` to verify their passwords from database, you must store the hashed password and not use plain text one.

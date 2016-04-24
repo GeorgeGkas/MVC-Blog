@@ -24,9 +24,10 @@
                 $STH = $this->CONN->prepare('SELECT password FROM blog_members WHERE email = :email');
                 $STH->execute(array('email' => $UserEmail));
                 
-                $row = $STH->fetch(PDO::FETCH_ASSOC);
+                $row = $STH->fetch(PDO::FETCH_ASSOC);               
+                $Verified = password_verify($Pass, $row['password']);
 
-                if ($row && $Pass == $row['password']) {
+                if ($row && $Verified) {
                     return true;
                 }
 
