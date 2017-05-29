@@ -1,14 +1,14 @@
 MVC Personal Blog
 ========================
 
-##Prologue
+## Prologue
 
 **MVC  (Model - View - Controller)** is a software architectural pattern for implementing user interfaces on computers. As someone gets deep in web (or software)  development, he/she should understand the principles that come from MVC. 
 
 This project uses the above idea. With that in mind, I created a simple blog style personal website, mainly for study purposes and better understanding of modern web development.
 
 
-##Technical details
+## Technical details
 
 Requirements:
 
@@ -42,15 +42,15 @@ To get a Gmail application password [follow the official guide](https://support.
 
 In this file the only you want to change is the `$_Title` variable that holds the title of each page.
 
-##Admin & Members accounts
+## Admin & Members accounts
 
 The project uses many-accounts relationship. This means that there is only one admin account which can edit-delete all the other members posts as well to write his/her own. All the other accounts are personal and can manipulate only their posts. 
 
-###Members
+### Members
 
 To register an account (as there is no such thing as register form) you have to contact to admin by contact page and request one member account. 
 
-###Admin
+### Admin
 
 The administrator of the website needs to change a line so the server can recognize him. 
 
@@ -64,7 +64,7 @@ For better security use a custom domain.
 > administrator@secretdomain.com
 
 
-##Blog writers and domains
+## Blog writers and domains
 
 The domain of each user is shown in the footer area of each post in this format:
 
@@ -74,7 +74,7 @@ For administator posts the `member's email` section is filled with the following
 
 > some_name **@epost.com**
 
-##Database
+## Database
 
 You have to change the following files to be able to connect to Mysql database.
 
@@ -99,17 +99,13 @@ If you are new to Mysql, please install [phpMyAdmin](http://docs.phpmyadmin.net/
 
   *For Member Database Schema see:  **members/members_schema.sql***
 
-###Blog Posts
+### Blog Posts
 
 The post table holds the title, a description and the main content of each post as well as the date of creation.
 
   *For Posts Database Schema see:  **blog/posts_schema.sql***
 
-
-
-
-
-##Safety
+## Safety
 
 We add a helper php script called **bcrypt.php** under root directory. This script takes as input a text value and returned the hashed one. 
 The feature adds some security to our members as we verify now their passwords using [bcrypt](https://secure.php.net/manual/en/function.password-hash.php).
