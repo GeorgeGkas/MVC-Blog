@@ -5,7 +5,7 @@ MVC Personal Blog
 
 **MVC  (Model - View - Controller)** is a software architectural pattern for implementing user interfaces on computers. As someone gets deep in web (or software)  development, he/she should understand the principles that come from MVC. 
 
-This project uses the above idea. With that in mind, I created a simple blog style personal website, mainly for study purposes and better understanding of modern web development.
+This blog app is based on the above pattern.
 
 
 ## Technical details
@@ -20,7 +20,7 @@ Third party modules:
  
 ## Project Set Up
 
-To test the project in your machine you have to change the following options in files:
+To test the project in your machine you have to make the following changes:
 
 
 
@@ -40,11 +40,11 @@ To get a Gmail application password [follow the official guide](https://support.
 ----------
  - dependences.php ( under config )
 
-In this file the only you want to change is the `$_Title` variable that holds the title of each page.
+Change the `$_Title` variable according to your preference. This will be the main title of the blog.
 
 ## Admin & Members accounts
 
-The project uses many-accounts relationship. This means that there is only one admin account which can edit-delete all the other members posts as well to write his/her own. All the other accounts are personal and can manipulate only their posts. 
+The project uses many-accounts relationship. There is one admin account which can edit the posts of all the other members. 
 
 ### Members
 
@@ -52,7 +52,7 @@ To register an account (as there is no such thing as register form) you have to 
 
 ### Admin
 
-The administrator of the website needs to change a line so the server can recognize him. 
+The administrator of the website needs to change the follwoing line to grant access in the server. 
 
  - admin.variables.com ( under members/config )
 
@@ -64,13 +64,13 @@ For better security use a custom domain.
 > administrator@secretdomain.com
 
 
-## Blog writers and domains
+## Writers and domains
 
 The domain of each user is shown in the footer area of each post in this format:
 
 > Added on ***Day*** ***Month*** ***Year*** from ***member's email*** 
 
-For administator posts the `member's email` section is filled with the following account :
+For administator's posts the `member's email` section is filled with the following account :
 
 > some_name **@epost.com**
 
@@ -80,7 +80,7 @@ You have to change the following files to be able to connect to Mysql database.
 
  - db.php ( under config )
 
-Set the following options with your credentials:
+Change the following lines with your credentials:
 
     define('DBHOST','host');
     define('DBUSER','user');
@@ -91,17 +91,15 @@ The database uses two tables. One is called `blog_members`  and the other `blog_
 
 ### Blog Members
 
-The members table holds the admin account as well as all the other users. To set a new account you have to type manually an SQL Insert comand like so:
+The members table contains the users account (including administrator's). To set a new account you have to type manually an SQL Insert comand like so:
 
     INSERT INTO `blog_members`(`username`, `password`, `email`) VALUES ('someUserName','somePassword','comeEmail')
 
-If you are new to Mysql, please install [phpMyAdmin](http://docs.phpmyadmin.net/en/latest/setup.html) for better command support.
-
   *For Member Database Schema see:  **members/members_schema.sql***
 
-### Blog Posts
+### Posts
 
-The post table holds the title, a description and the main content of each post as well as the date of creation.
+The post table contains the following columns: the title, a description and the main content of each post as well as the date of creation.
 
   *For Posts Database Schema see:  **blog/posts_schema.sql***
 
@@ -110,4 +108,4 @@ The post table holds the title, a description and the main content of each post 
 We add a helper php script called **bcrypt.php** under root directory. This script takes as input a text value and returned the hashed one. 
 The feature adds some security to our members as we verify now their passwords using [bcrypt](https://secure.php.net/manual/en/function.password-hash.php).
 
-As we use `password_verify()` to verify their passwords from database, you must store the hashed password and not use plain text one.
+You have to use `password_verify()` to verify passwords from the database.
